@@ -5,11 +5,11 @@ from pygame.locals import *
 def GameRestart(_score):
     restart_screen = pygame.display.set_mode((800, 500))
     pygame.font.init()
-    restart_font = pygame.font.SysFont('Sans', 60, True, True)
+    restart_font = pygame.font.SysFont('Sans', 60, True, False)
     restart_message = 'Press the space key to restart'
     restart_message_object = restart_font.render(restart_message, True, (0, 0, 0))
     score_message = 'Your score is ' + str(_score)
-    score_message_object = restart_font.render(score_message, True, (0, 0, 255))
+    score_message_object = restart_font.render(score_message, True, (255, 0, 0))
 
     while True:
         for event in pygame.event.get():
@@ -65,7 +65,7 @@ def main():
     y_vel = 0
 
     # 폰트 객체 생성
-    font = pygame.font.SysFont('Sans', 30, True, True)
+    font = pygame.font.SysFont('Sans', 30, True, False)
 
     # 점수 변수
     score = 0
